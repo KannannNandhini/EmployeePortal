@@ -1,17 +1,14 @@
 package com.example.EmployeePortal.models;
 
-import lombok.Data;
-
-@Data
 public class Employee {
-    public Employee(String fristname, String lastname, String department) {
-        this.fristname = fristname;
-        this.lastname = lastname;
+    public Employee(String firstName, String lastName, String department) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.department = department;
     }
 
-    private String fristname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
 
     public String getDepartment() {
         return department;
@@ -21,22 +18,30 @@ public class Employee {
         this.department = department;
     }
 
-    public String getFristname() {
-        return fristname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFristname(String fristname) {
-        this.fristname = fristname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     private String department;
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstname='" + firstName + '\'' +
+                ", lastname='" + lastName + '\'' +
+                ", department='" + department + '\'' +
+                '}';
+    }
 }
